@@ -1,0 +1,62 @@
+---
+label: Info
+hide_body: false
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: email
+  type: text
+  config:
+    required: true
+  label: Email
+- name: address
+  type: field_group_list
+  fields:
+  - name: line
+    type: text
+    config:
+      required: true
+    label: Line
+  config:
+    min: '1'
+    max: 
+    labelField: 
+  label: Address
+- name: map_latitude
+  type: number
+  label: Map Latitude
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: map_longitude
+  type: number
+  label: Map longitude
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: opening_hours
+  type: field_group_list
+  fields:
+  - name: line
+    type: text
+    config:
+      required: true
+    label: Line
+  config:
+    min: '1'
+    max: 
+    labelField: 
+  label: Opening Hours

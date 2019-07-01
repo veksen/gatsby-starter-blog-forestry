@@ -1,0 +1,19 @@
+---
+label: Partner
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: link
+  type: text
+  config:
+    required: false
+  label: Link
+- name: image
+  type: file
+  config:
+    maxSize: '25'
+  label: Image

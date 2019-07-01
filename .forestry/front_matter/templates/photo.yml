@@ -1,0 +1,24 @@
+---
+label: Photo
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: image
+  type: file
+  config:
+    maxSize: '25'
+  label: Image

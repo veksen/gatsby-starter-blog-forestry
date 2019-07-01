@@ -1,0 +1,56 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: directory
+  path: blog
+  label: Blog
+  create: documents
+  match: "*"
+  templates:
+  - blog
+- type: directory
+  path: partners
+  label: Partners
+  create: documents
+  match: "*"
+  templates:
+  - partner
+- type: directory
+  path: info
+  label: Info
+  create: documents
+  match: "*"
+  templates:
+  - info
+- type: heading
+  label: Pages
+- type: directory
+  path: photos
+  label: Photos
+  create: all
+  match: "*"
+  templates:
+  - photo
+- type: directory
+  path: la-ferme
+  label: La ferme
+  create: documents
+  match: "*"
+  templates:
+  - page
+upload_dir: uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_command: gatsby build
+  publish_command: gatsby build
+  preview_output_directory: public
+  output_directory: public
+  instant_preview_command: gatsby develop -H 0.0.0.0 -p 8080
+  preview_docker_image: node:10
+  mount_path: "/srv"
