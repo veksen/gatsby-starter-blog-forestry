@@ -15,11 +15,12 @@ class BlogIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    console.log(posts);
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet
-          htmlAttributes={{ lang: 'en' }}
+          htmlAttributes={{ lang: 'fr' }}
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
@@ -37,8 +38,8 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <small>{node.frontmatter.publish_date}</small>
+              <p dangerouslySetInnerHTML={{ __html: node.frontmatter.body }} />
             </div>
           )
         })}
@@ -57,7 +58,7 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___publish_date], order: DESC }) {
       edges {
         node {
           excerpt
@@ -65,8 +66,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            publish_date(formatString: "MMMM DD, YYYY")
             title
+            body
           }
         }
       }
