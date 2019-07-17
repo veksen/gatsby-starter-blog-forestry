@@ -4,10 +4,6 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: content/contactez-nous.md
-  label: Contactez-nous
-  match: "**/*"
 - type: directory
   path: content/blog
   label: Blog
@@ -41,6 +37,12 @@ sections:
   match: "*"
   templates:
   - photo
+- type: document
+  path: content/contactez-nous.md
+  label: Contactez-nous
+  match: "**/*"
+- type: heading
+  label: Content
 - type: directory
   path: content
   label: Content
