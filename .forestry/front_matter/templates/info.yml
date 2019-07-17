@@ -12,6 +12,11 @@ fields:
   config:
     required: true
   label: Email
+- name: phone
+  type: text
+  config:
+    required: true
+  label: Phone
 - name: address
   type: field_group_list
   fields:
