@@ -40,7 +40,6 @@ sections:
 - type: document
   path: content/contactez-nous.md
   label: Contactez-nous
-  match: "**/*"
 - type: heading
   label: Content
 - type: directory
