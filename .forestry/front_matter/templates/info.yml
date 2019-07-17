@@ -60,3 +60,5 @@ fields:
     max: 
     labelField: 
   label: Opening Hours
+pages:
+- content/contactez-nous.md
