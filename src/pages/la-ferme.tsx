@@ -22,25 +22,14 @@ const BlogIndex = (props): JSX.Element => {
         title={siteTitle}
       />
       <Container>
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = get(node, "frontmatter.title") || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4)
-                }}
-              >
-                <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.publish_date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.frontmatter.body }} />
-            </div>
-          )
-        })}
+        <Title>À propos de la ferme</Title>
+        <About />
+
+        <Title style={{ marginTop: "3em" }}>Contactez-nous</Title>
+        <Contact />
+        <ContactForm />
+
+        <BioBaskets padTop />
       </Container>
     </Layout>
   )

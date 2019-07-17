@@ -22,6 +22,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: "assets"
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -72,6 +79,7 @@ module.exports = {
         pathToConfigModule: "src/utils/typography"
       }
     },
+    `gatsby-plugin-react-svg`,
     `gatsby-plugin-typescript`
   ]
 }
