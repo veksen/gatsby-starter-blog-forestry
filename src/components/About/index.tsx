@@ -4,27 +4,15 @@ import { HTMLContent } from "../HTMLContent"
 
 const ABOUT_QUERY = graphql`
   query {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "about-page" } } }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          html
-        }
-      }
+    markdownRemark(fields: { slug: { eq: "/la-ferme/" } }) {
+      html
     }
   }
 `
 
 const About = (): JSX.Element => {
-  const data = useStaticQuery(ABOUT_QUERY)
-  const { edges } = data.allMarkdownRemark
-  const { html } = edges[0].node
+  const { markdownRemark } = useStaticQuery(ABOUT_QUERY)
+  const { html } = markdownRemark
 
   return <HTMLContent className="content" content={html} />
 }

@@ -7,6 +7,10 @@ import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import { rhythm } from "../utils/typography"
 import Container from "../components/Container"
+import Title from "../components/Title"
+import About from "../components/About"
+import ContactForm from "../components/ContactForm"
+import Contact from "../components/Contact"
 
 const BlogIndex = (props): JSX.Element => {
   const siteTitle = get(props, "data.site.siteMetadata.title")
@@ -29,7 +33,7 @@ const BlogIndex = (props): JSX.Element => {
         <Contact />
         <ContactForm />
 
-        <BioBaskets padTop />
+        {/* <BioBaskets padTop /> */}
       </Container>
     </Layout>
   )
