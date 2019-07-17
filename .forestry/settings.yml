@@ -5,21 +5,21 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: blog
+  path: content/blog
   label: Blog
   create: documents
   match: "*"
   templates:
   - blog
 - type: directory
-  path: partners
+  path: content/partners
   label: Partners
   create: documents
   match: "*"
   templates:
   - partner
 - type: directory
-  path: info
+  path: content/info
   label: Info
   create: documents
   match: "*"
@@ -27,20 +27,21 @@ sections:
   - info
 - type: heading
   label: Pages
+- type: document
+  path: content/la-ferme.md
+  label: La ferme
 - type: directory
-  path: photos
+  path: content/photos
   label: Photos
   create: all
   match: "*"
   templates:
   - photo
 - type: directory
-  path: la-ferme
-  label: La ferme
+  path: content
+  label: Content
   create: documents
-  match: "*"
-  templates:
-  - page
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
@@ -52,5 +53,6 @@ build:
   preview_output_directory: public
   output_directory: public
   instant_preview_command: gatsby develop -H 0.0.0.0 -p 8080
+  install_dependencies_command: yarn install
   preview_docker_image: node:10
   mount_path: "/srv"

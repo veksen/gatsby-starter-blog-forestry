@@ -27,5 +27,3 @@ fields:
     schema:
       format: markdown
   label: Body
-pages:
-- blog/blog-post.md
