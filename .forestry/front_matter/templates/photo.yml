@@ -23,4 +23,5 @@ fields:
     maxSize: '25'
   label: Image
 pages:
+- content/photos/title-2.md
 - content/photos/title-1.md
