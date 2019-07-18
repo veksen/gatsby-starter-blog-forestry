@@ -61,11 +61,8 @@ const Header = (props): JSX.Element => {
           <SC.StyledLink to="/" activeClassName="active">
             Accueil
           </SC.StyledLink>
-          <SC.StyledLink to="/qui-sommes-nous" activeClassName="active">
+          <SC.StyledLink to="/la-ferme" activeClassName="active">
             La ferme
-          </SC.StyledLink>
-          <SC.StyledLink to="/contact" activeClassName="active">
-            Contactez-nous
           </SC.StyledLink>
           <SC.StyledLink to="/photos" activeClassName="active">
             Photos
